@@ -7,27 +7,24 @@ local fuckshit = Instance.new("UICorner")
 local MODILEMAGE = Instance.new("ImageLabel")
 local posto = Instance.new("UIStroke")
 
-ZenHub.Name = "ZenHub"
-ZenHub.Parent = game.CoreGui
-ZenHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
 
-Open.Name = "Open"
-Open.Parent = ZenHub
-Open.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-Open.BorderSizePixel = 0.5
-Open.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
-Open.Size = UDim2.new(0, 39, 0, 30)
-Open.Font = Enum.Font.Code
-Open.Text = "A"
-Open.TextColor3 = Color3.fromRGB(51,255,255)
-Open.TextScaled = true
-Open.TextSize = 14.000
-Open.TextWrapped = true
-Open.Visible = true
-Open.MouseButton1Click:Connect(function()
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
+ImageButton.Size = UDim2.new(0, 45, 0, 45)
+ImageButton.Draggable = true
+ImageButton.Image = "http://www.roblox.com/asset/?id=7637477170"
+ImageButton.MouseButton1Down:connect(function()
 game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
-    game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
-    end)
+ game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
+end)
 
 
 fuckshit.Parent = Open
